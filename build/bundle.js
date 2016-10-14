@@ -55,10 +55,11 @@
 	var contact_1 = __webpack_require__(72);
 	var browserHistory = ReactRouter.browserHistory;
 	ReactDOM.render(React.createElement(react_router_1.Router, {history: browserHistory}, 
-	    React.createElement(react_router_1.Route, {path: "/", component: Main_1.Main}), 
-	    React.createElement(react_router_1.Route, {path: "/resume", component: resume_1.Resume}), 
-	    React.createElement(react_router_1.Route, {path: "/projects", component: projects_1.Projects}), 
-	    React.createElement(react_router_1.Route, {path: "/contactme", component: contact_1.Contact})), document.getElementById('root'));
+	    React.createElement(react_router_1.Route, {path: "/", component: Main_1.Main}, 
+	        React.createElement(react_router_1.Route, {path: "resume", component: resume_1.Resume}), 
+	        React.createElement(react_router_1.Route, {path: "projects", component: projects_1.Projects}), 
+	        React.createElement(react_router_1.Route, {path: "contactme", component: contact_1.Contact}))
+	), document.getElementById('root'));
 
 
 /***/ },
