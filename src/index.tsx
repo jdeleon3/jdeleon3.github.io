@@ -12,7 +12,7 @@ import { createHashHistory } from "history";
 var browserHistory = ReactRouter.browserHistory;
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route path="/index.html" component={Main} />        
+        <Route path="/" component={Main} />        
         <Route path="/resume" component={Resume}/>
         <Route path="/projects" component={Projects}/>
         <Route path="/contactme" component={Contact}/>
