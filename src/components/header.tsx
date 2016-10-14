@@ -12,10 +12,10 @@ export class Header extends React.Component<HeaderProps, any>{
         return <nav className="navbar navbar-inverse navbar-fixed-top">
                 <div className="container-fluid">
                     <ul className="nav navbar-nav">
-                        <Link Name='About' ClassName="active" /> 
-                        <Link Name='Resume' ClassName='' /> 
-                        <Link Name='Projects' ClassName='' /> 
-                        <Link Name='Contact Me' ClassName=''/>
+                        <Link Name='About' ClassName="active" Path="" /> 
+                        <Link Name='Resume' ClassName='' Path="/resume" /> 
+                        <Link Name='Projects' ClassName='' Path="/Projects" /> 
+                        <Link Name='Contact Me' ClassName='' Path="/contactme"/>
                     </ul>
                 </div>
                </nav>;

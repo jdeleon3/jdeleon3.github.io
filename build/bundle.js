@@ -5959,10 +5959,10 @@
 	        return React.createElement("nav", {className: "navbar navbar-inverse navbar-fixed-top"}, 
 	            React.createElement("div", {className: "container-fluid"}, 
 	                React.createElement("ul", {className: "nav navbar-nav"}, 
-	                    React.createElement(link_1.Link, {Name: 'About', ClassName: "active"}), 
-	                    React.createElement(link_1.Link, {Name: 'Resume', ClassName: ''}), 
-	                    React.createElement(link_1.Link, {Name: 'Projects', ClassName: ''}), 
-	                    React.createElement(link_1.Link, {Name: 'Contact Me', ClassName: ''}))
+	                    React.createElement(link_1.Link, {Name: 'About', ClassName: "active", Path: ""}), 
+	                    React.createElement(link_1.Link, {Name: 'Resume', ClassName: '', Path: "/resume"}), 
+	                    React.createElement(link_1.Link, {Name: 'Projects', ClassName: '', Path: "/Projects"}), 
+	                    React.createElement(link_1.Link, {Name: 'Contact Me', ClassName: '', Path: "/contactme"}))
 	            )
 	        );
 	    };
@@ -5989,11 +5989,11 @@
 	        this.handleClick = this.handleClick.bind(this);
 	    }
 	    Link.prototype.handleClick = function () {
-	        alert('Hello, ' + this.props.Name + '!');
+	        this.props.ClassName = 'Active';
 	    };
 	    Link.prototype.render = function () {
 	        return React.createElement("li", {role: "presentation", className: '{this.props.ClassName}'}, 
-	            React.createElement("a", {href: 'javascript:void(0);', onClick: this.handleClick}, this.props.Name)
+	            React.createElement("a", {href: this.props.Path, onClick: this.handleClick}, this.props.Name)
 	        );
 	    };
 	    return Link;

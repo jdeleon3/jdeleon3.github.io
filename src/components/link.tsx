@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 export interface LinkProps{
     Name: string;
     ClassName: string;
+    Path: string;
 }
 
 export class Link extends React.Component<LinkProps, any>{
@@ -13,10 +14,10 @@ export class Link extends React.Component<LinkProps, any>{
     }
 
     handleClick(){
-        alert('Hello, ' + this.props.Name + '!');
+        this.props.ClassName = 'Active';
     }
 
     render(){
-        return <li role="presentation" className='{this.props.ClassName}'><a href='javascript:void(0);' onClick={this.handleClick}>{this.props.Name}</a></li>
+        return <li role="presentation" className='{this.props.ClassName}'><a href={this.props.Path} onClick={this.handleClick}>{this.props.Name}</a></li>
     }
 }
